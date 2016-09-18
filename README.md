@@ -1,24 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h3>Instruction</h3>
+<ul>
+    <li>
+        <p>Go to console and create item with picture, name and description</p>
+        <p>Item.create(name: "example name", description: "some text", picture: File.open("image.jpg", "rb"))</p>    
+    </li>
+    <li>
+        <p>Check out picture's url of recently created item</p>
+        <p>Item.last.picture.url</p>
+    </li>
+</ul>
