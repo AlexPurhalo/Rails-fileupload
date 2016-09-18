@@ -47,6 +47,8 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    carrierwave-base64 (2.2.0)
+      carrierwave (>= 0.8.0, < 0.12.0)
     concurrent-ruby (1.0.2)
     erubis (2.7.0)
     ffi (1.9.14)
@@ -135,6 +137,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   carrierwave
+  carrierwave-base64
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   puma (~> 3.0)

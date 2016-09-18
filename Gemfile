@@ -39,3 +39,4 @@ gem 'jbuilder', '~> 2.0'
 gem 'rack-cors'
 
 gem 'carrierwave'
+gem 'carrierwave-base64'
