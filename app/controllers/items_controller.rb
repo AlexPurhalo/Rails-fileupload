@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.order("created_at DESC")
   end
 
   # GET /items/1
@@ -18,6 +18,11 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
+      #iterate through each of the files
+      params[:item][:document_data].each do |file|
+        @item.documents.create!(document: file)
+        #create a document associated with the item that has just been created
+      end
       render :show, status: :created, location: @item
     else
       render json: @item.errors, status: :unprocessable_entity
@@ -48,6 +53,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :description, :picture)
+      params.require(:item).permit(:name, :description, :picture, document_data: [])
     end
 end
