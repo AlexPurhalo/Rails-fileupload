@@ -40,3 +40,5 @@ gem 'rack-cors'
 
 gem 'carrierwave'
 gem 'carrierwave-base64'
+gem 'fog-aws'
+gem 'figaro'
